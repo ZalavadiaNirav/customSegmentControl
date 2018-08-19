@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="customSegment">
+            <connections>
+                <outlet property="commercialBtn" destination="hTE-mg-ta4" id="z3t-7X-WML"/>
+                <outlet property="customSegmentFromXib" destination="nYo-YD-vhp" id="yoQ-Fe-fFu"/>
+                <outlet property="residentailBtn" destination="wHD-QH-wJh" id="Qcz-Mq-1cj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nYo-YD-vhp" userLabel="contentView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qbt-RE-g2d">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <subviews>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHD-QH-wJh">
+                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                                    <color key="backgroundColor" red="0.0" green="0.3294117647" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Residential">
+                                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="chanfedSegment:" destination="-1" eventType="touchUpInside" id="UQJ-zK-Evr"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTE-mg-ta4">
+                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Commercial">
+                                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="chanfedSegment:" destination="-1" eventType="touchUpInside" id="sb6-Zx-raU"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="1nM-Sb-eMO"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="qbt-RE-g2d" firstAttribute="leading" secondItem="nYo-YD-vhp" secondAttribute="leading" id="7nB-Ty-Sko"/>
+                        <constraint firstAttribute="height" constant="44" id="9WX-Y2-8PM"/>
+                        <constraint firstItem="qbt-RE-g2d" firstAttribute="top" secondItem="nYo-YD-vhp" secondAttribute="top" id="CVu-NE-aUY"/>
+                        <constraint firstAttribute="bottom" secondItem="qbt-RE-g2d" secondAttribute="bottom" id="eHQ-Uq-JA6"/>
+                        <constraint firstAttribute="trailing" secondItem="qbt-RE-g2d" secondAttribute="trailing" id="euV-5N-yQk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nYo-YD-vhp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9h2-uE-GP4"/>
+                <constraint firstItem="nYo-YD-vhp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WT9-nH-lC8"/>
+                <constraint firstItem="nYo-YD-vhp" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="sRb-fh-vyk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-261.5" y="-519"/>
+        </view>
+    </objects>
+</document>
