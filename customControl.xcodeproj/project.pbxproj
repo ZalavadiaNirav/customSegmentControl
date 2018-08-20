@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19F02025212B1370007080DB /* vcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F02024212B1370007080DB /* vcViewController.m */; };
+		19F02029212B14E1007080DB /* propertyCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F02027212B14E1007080DB /* propertyCellCollectionViewCell.m */; };
+		19F0202A212B14E1007080DB /* propertyCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F02028212B14E1007080DB /* propertyCellCollectionViewCell.xib */; };
 		19FC63AA2129247100D03995 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FC63A92129247100D03995 /* AppDelegate.m */; };
 		19FC63AD2129247100D03995 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FC63AC2129247100D03995 /* ViewController.m */; };
 		19FC63B02129247100D03995 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FC63AE2129247100D03995 /* Main.storyboard */; };
@@ -19,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19F02023212B136F007080DB /* vcViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vcViewController.h; sourceTree = "<group>"; };
+		19F02024212B1370007080DB /* vcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vcViewController.m; sourceTree = "<group>"; };
+		19F02026212B14E1007080DB /* propertyCellCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = propertyCellCollectionViewCell.h; sourceTree = "<group>"; };
+		19F02027212B14E1007080DB /* propertyCellCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = propertyCellCollectionViewCell.m; sourceTree = "<group>"; };
+		19F02028212B14E1007080DB /* propertyCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = propertyCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		19FC63A52129247100D03995 /* customControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = customControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19FC63A82129247100D03995 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19FC63A92129247100D03995 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,6 +81,11 @@
 				19FC63C22129256B00D03995 /* customSegment.m */,
 				19FC63C4212938AA00D03995 /* customSegment.xib */,
 				19FC63AE2129247100D03995 /* Main.storyboard */,
+				19F02026212B14E1007080DB /* propertyCellCollectionViewCell.h */,
+				19F02027212B14E1007080DB /* propertyCellCollectionViewCell.m */,
+				19F02028212B14E1007080DB /* propertyCellCollectionViewCell.xib */,
+				19F02023212B136F007080DB /* vcViewController.h */,
+				19F02024212B1370007080DB /* vcViewController.m */,
 				19FC63B42129247100D03995 /* Assets.xcassets */,
 				19FC63B62129247100D03995 /* LaunchScreen.storyboard */,
 				19FC63B92129247100D03995 /* Info.plist */,
@@ -140,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19F0202A212B14E1007080DB /* propertyCellCollectionViewCell.xib in Resources */,
 				19FC63C5212938AA00D03995 /* customSegment.xib in Resources */,
 				19FC63B82129247100D03995 /* LaunchScreen.storyboard in Resources */,
 				19FC63B52129247100D03995 /* Assets.xcassets in Resources */,
@@ -154,9 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19F02029212B14E1007080DB /* propertyCellCollectionViewCell.m in Sources */,
 				19FC63AD2129247100D03995 /* ViewController.m in Sources */,
 				19FC63AA2129247100D03995 /* AppDelegate.m in Sources */,
 				19FC63BB2129247100D03995 /* main.m in Sources */,
+				19F02025212B1370007080DB /* vcViewController.m in Sources */,
 				19FC63C32129256B00D03995 /* customSegment.m in Sources */,
 				19FC63B32129247100D03995 /* customControl.xcdatamodeld in Sources */,
 			);

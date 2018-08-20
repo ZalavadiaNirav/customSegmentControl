@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +14,10 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1T2-id-H6K"/>
+                        <viewControllerLayoutGuide type="bottom" id="OKC-fA-OaY"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,11 +40,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LyJ-ng-uaq" secondAttribute="trailing" id="EEW-Ob-z9l"/>
-                            <constraint firstItem="LyJ-ng-uaq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LaC-Zn-CwH"/>
-                            <constraint firstItem="LyJ-ng-uaq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PzY-Pp-5lj"/>
+                            <constraint firstAttribute="trailing" secondItem="LyJ-ng-uaq" secondAttribute="trailing" id="EEW-Ob-z9l"/>
+                            <constraint firstItem="LyJ-ng-uaq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LaC-Zn-CwH"/>
+                            <constraint firstItem="LyJ-ng-uaq" firstAttribute="top" secondItem="1T2-id-H6K" secondAttribute="bottom" id="PzY-Pp-5lj"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="segmentControl" destination="LyJ-ng-uaq" id="fm5-N7-WMB"/>
@@ -50,30 +53,57 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
-        <!--View Controller-->
+        <!--Vc View Controller-->
         <scene sceneID="5IA-om-cRx">
             <objects>
-                <viewController id="vLD-OQ-Q9a" sceneMemberID="viewController">
+                <viewController id="vLD-OQ-Q9a" customClass="vcViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rJF-K3-U44"/>
+                        <viewControllerLayoutGuide type="bottom" id="RyN-2u-BGz"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iaU-XB-gSl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QY-2i-RGj">
-                                <rect key="frame" x="193" y="183" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QY-2i-RGj">
+                                <rect key="frame" x="115" y="617" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="me2-EG-Znw"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKO-6o-HJy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="414"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pWh-No-KKc">
+                                    <size key="itemSize" width="356" height="251"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vLD-OQ-Q9a" id="6tp-gG-Ic6"/>
+                                    <outlet property="delegate" destination="vLD-OQ-Q9a" id="HnJ-Zj-lXc"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="dBR-Ps-Y5J"/>
+                        <constraints>
+                            <constraint firstItem="OKO-6o-HJy" firstAttribute="leading" secondItem="iaU-XB-gSl" secondAttribute="leading" id="RH9-6M-4ru"/>
+                            <constraint firstItem="0QY-2i-RGj" firstAttribute="top" secondItem="iaU-XB-gSl" secondAttribute="bottom" constant="-50" id="Scm-ax-nWC"/>
+                            <constraint firstItem="OKO-6o-HJy" firstAttribute="trailing" secondItem="iaU-XB-gSl" secondAttribute="trailing" id="ibV-Qy-kZE"/>
+                            <constraint firstItem="RyN-2u-BGz" firstAttribute="top" secondItem="OKO-6o-HJy" secondAttribute="bottom" constant="253" id="omf-GL-cNC"/>
+                            <constraint firstItem="OKO-6o-HJy" firstAttribute="top" secondItem="iaU-XB-gSl" secondAttribute="top" id="wkw-eW-K4I"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionVw" destination="OKO-6o-HJy" id="H0z-IH-UY9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2a-I8-4mI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="144"/>
+            <point key="canvasLocation" x="940" y="143.47826086956522"/>
         </scene>
     </scenes>
 </document>
